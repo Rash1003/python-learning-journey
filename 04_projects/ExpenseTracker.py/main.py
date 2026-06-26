@@ -36,3 +36,17 @@ for expense in expenses:
     total += expense["amount"]
 
 print(f"\nTotal Spending: ₹{total}")
+
+
+for expense in expenses:
+    print(f"{expense['category']} : ₹{expense['amount']}")
+
+if len(expenses) > 0:
+    highest = expenses[0]
+
+    for expense in expenses:
+        if expense["amount"] > highest["amount"]:
+            highest = expense
+
+    print("\n===== Highest Expense =====")
+    print(f"{highest['category']} : ₹{highest['amount']}")
