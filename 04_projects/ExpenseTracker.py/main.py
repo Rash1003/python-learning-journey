@@ -1,10 +1,9 @@
 print("===== Expense Tracker =====")
 print("1. Add Expense")
-print("2. View Expenses")
-print("3. Total Spending")
-print("4. Highest Expense")
-print("5. Search Category")
-print("6. Exit")
+print("2. Total Spending")
+print("3. Highest Expense")
+print("4. Search Category")
+print("5. Exit")
 
 expenses = []
 
@@ -24,8 +23,16 @@ while True:
     if choice.lower() == "n":
         break
 
-print("\nExpenses:")
+print("\nYour Expenses:")
 for expense in expenses:
     print(f"{expense['category']} : ₹{expense['amount']}")
 
-    
+print("\nExpenses:")
+
+total = 0
+
+for expense in expenses:
+    print(f"{expense['category']} : ₹{expense['amount']}")
+    total += expense["amount"]
+
+print(f"\nTotal Spending: ₹{total}")
