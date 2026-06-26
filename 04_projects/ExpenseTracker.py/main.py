@@ -2,8 +2,6 @@ print("===== Expense Tracker =====")
 print("1. Add Expense")
 print("2. Total Spending")
 print("3. Highest Expense")
-print("4. Search Category")
-print("5. Exit")
 
 expenses = []
 
@@ -50,3 +48,4 @@ if len(expenses) > 0:
 
     print("\n===== Highest Expense =====")
     print(f"{highest['category']} : ₹{highest['amount']}")
+
