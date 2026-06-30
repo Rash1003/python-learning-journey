@@ -44,14 +44,23 @@ class Line:
         else:
             return "point is not on line"
 
+    #method to calculate shortest distance between a line and a point
+    def shortest_distance(line,point):
+        return abs(line.A*point.x_cod + line.B*point.y_cod +line.C) / (line.A**2 + line.B**2)**0.5
 
 """ p1 = Point(3,6)
 p2 = Point(8,-5)
  """
 l1 = Line(1,2,1)
 p1 = Point(2,2)
-on_line = l1.point_on_line(p1)
-print(on_line)
+print(l1)
+print(p1)
+
+""" on_line = l1.point_on_line(p1)
+print(on_line) """
+
+short_dist = l1.shortest_distance(p1)
+print(short_dist)
 
 """ print(p1)        
 print(p2)
