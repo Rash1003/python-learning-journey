@@ -18,10 +18,16 @@ class Point:
     def euclidean_distance(self,other):
         return ((self.x_cod - other.x_cod)**2 + (self.y_cod - other.y_cod)**2)**0.5
 
-p1 = Point(0,0)
-p2 = Point(10,10)
+    def distance_from_origin(self):
+        return self.euclidean_distance(Point(0,0))
+
+p1 = Point(3,6)
+p2 = Point(8,-5)
 
 print(p1)        
 print(p2)
 dist = p1.euclidean_distance(p2)
 print(dist)
+
+origin = p2.distance_from_origin()
+print(origin)
